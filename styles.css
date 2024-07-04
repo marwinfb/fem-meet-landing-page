@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://unpkg.com/modern-css-reset/dist/reset.min.css");
+
+:root {
+  --color-primary-cyan: hsl(192, 37%, 48%);
+  --color-primary-purple: hsl(268, 34%, 53%);
+  --color-primary-black: hsl(240, 21%, 20%);
+  --color-primary-gray: hsl(240, 10%, 57%);
+
+  --color-neutral-cyan: hsl(192, 90%, 77%);
+  --color-neutral-purple: hsl(268, 100%, 86%);
+  --color-neutral-white: hsl(0, 0%, 98%);
+
+  --font-primary: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-color: var(--color-neutral-white);
+  color: var(--color-primary-gray);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+:is(h1, h2, h3) {
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-primary-black);
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 900;
+  padding: 16px 40px;
+}
+
+.btn--secondary {
+  background-color: var(--color-primary-purple);
+}
+
+.btn--primary {
+  background-color: var(--color-primary-cyan);
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  /* outline: 1px solid orange; */
+}
+
+.header {
+  position: relative;
+  margin-bottom: 110px;
+}
+
+.header::before {
+  content: "";
+  background-image: url(/assets/desktop/image-hero-left.png);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 394px;
+  height: 303px;
+  position: absolute;
+}
+
+.header::after {
+  content: "";
+  background-image: url(/assets/desktop/image-hero-right.png);
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 394px;
+  height: 303px;
+  position: absolute;
+}
+
+.header__logo {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__intro {
+  text-align: center;
+  max-width: 540px;
+  margin-top: 108px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__intro .headline {
+  font-size: 64px;
+  margin-bottom: 34px;
+}
+
+.header__intro .description {
+  margin-bottom: 32px;
+}
+
+.header__intro .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__intro .btn span {
+  color: var(--color-neutral-cyan);
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 140px;
+}
+
+.divider__line {
+  width: 1px;
+  height: 100%;
+  transform-origin: top center;
+  background-color: var(--color-primary-gray);
+}
+
+.divider__circle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid var(--color-primary-gray);
+  border-radius: 50%;
+  background: var(--color-neutral-white);
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider__text {
+  color: var(--color-primary-gray);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.625;
+}
+
+main {
+    margin-top: 64px;
+    margin-bottom: 72px;
+}
+
+.main .content__images {
+  list-style-type: none;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.main .content__images .img {
+  border-radius: 4px;
+}
+
+.main .content__text {
+  margin-top: 80px;
+  text-align: center;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main .content__text .overline {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 900;
+  color: var(--color-primary-cyan);
+}
+
+.main .content__text .headline {
+  margin-top: 16px;
+  font-size: 40px;
+  padding: 0 35px;
+}
+
+.main .content__text .description {
+  margin-top: 32px;
+}
+
+.footer {
+  background: linear-gradient(
+      hsl(192, 37%, 48%, 0.85),
+      hsl(192, 37%, 48%, 0.85)
+    ),
+    url(/assets/desktop/image-footer.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-color: var(--color-primary-cyan);
+  margin-top: -25px;
+}
+
+.footer .footer__content-wrap {
+  padding-top: 116px;
+  padding-bottom: 104px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 125px;
+}
+
+.footer .footer__content-wrap .headline {
+  color: var(--color-neutral-white);
+}
+
+.footer .footer__content-wrap .description {
+  color: var(--color-neutral-white);
+}
+
+.footer .footer__content-wrap .btn {
+  flex-shrink: 0;
+}
