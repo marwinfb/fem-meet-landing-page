@@ -148,9 +148,9 @@ body {
 }
 
 .divider__circle {
-  width: .2188rem;
-  height: .2188rem;
-  border: .0625rem solid var(--color-primary-gray);
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid var(--color-primary-gray);
   border-radius: 50%;
   background: var(--color-neutral-white);
 
@@ -163,7 +163,7 @@ body {
 
 .divider__text {
   color: var(--color-primary-gray);
-  font-size: .0625rem;
+  font-size: 1rem;
   font-weight: 900;
   line-height: 1.625;
 }
